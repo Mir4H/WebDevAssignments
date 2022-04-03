@@ -1,0 +1,230 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    margin: 0;
+  }
+
+  .container {
+      background-color: whitesmoke;
+      border-radius: 5px;
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      width: 600px;
+      max-width: 100%;
+  }
+  
+  h2 {
+      padding-left: 40px;
+      color: #af6980;
+      font-size: 30px;
+  }
+
+  #req {
+    padding-left: 40px;
+    color: #af6980;
+    font-size: 16px;
+  }
+
+  .form {
+      padding: 30px 40px;
+  }
+
+  .form_fields {
+      margin-bottom: 10px;
+      padding-bottom: 20px;
+      position: relative;
+  }
+
+  .form_fields label {
+      display: inline-block;
+      margin-bottom: 4px;
+  }
+
+  .form_fields input {
+      border: 1px solid #af6980;
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 4px;
+      display: block;
+      font-size: 14px;
+      width: 100%;
+      padding: 10px;
+  }
+
+  .form_fields input:focus {
+    border: 2px solid #af6980;
+    outline: none;
+  }
+
+  .form_fields i {
+      position: absolute;
+      top: 33px;
+      right: 10px;
+      visibility: hidden;
+  }
+
+  .form_fields small {
+      visibility: hidden;
+      position: absolute;
+      font-size: 14px;
+      bottom: 0;
+      left: 0;
+  }
+
+  .form_fields.success input {
+      border-color: green;
+  }
+
+  .form_fields.success i.fa-check-circle {
+      visibility: visible;
+      color: green;
+  }
+
+  .form_fields.error input {
+    border-color: red;
+  }
+
+  .form_fields.error i.fa-exclamation-circle {
+    visibility: visible;
+    color: red;
+  }
+
+  .form_fields.error small {
+      visibility: visible;
+      color: red;
+  }
+
+  .choices input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .choices input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .choices label {
+    display: inline-block;
+    background-color: #dfc8ce;
+    padding: 4px 11px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .choices input[type="radio"]:checked+label {
+    background-color: #af6980;
+  }
+
+  .choices input[type="checkbox"]:checked+label {
+    background-color: #af6980;
+  }
+
+  input[type=range] {
+    margin: 10px 0;
+    width: 100%;
+    background-color: #dfc8ce;
+  }
+
+  .slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    outline: none;
+    opacity: 0.6;
+  }
+  
+  .slider:hover {
+    opacity: 0.9;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #af6980;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #af6980;
+    cursor: pointer;
+  }
+
+  input[type=number] {
+      width: 20%;
+  }
+
+  .color_field {
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+  }
+
+  input[type="color"] {
+	width: 20%;
+    height: 50px;
+    border: none;
+}
+  select {
+    padding: 10px;
+    border-radius: 4px;
+    display: block;
+    font-size: 16px;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #af6980;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  textarea {
+    border: 1px solid #af6980;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    display: block;
+    font-size: 14px;
+    width: 100%;
+    padding: 10px;
+  }
+
+  textarea:focus {
+    border: 2px solid #af6980;
+    outline: none;
+  }
+
+
+  .form button {
+    background-color: #af6980;
+    border: 2px solid #af6980;
+    color: whitesmoke;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 4px;
+}
+
+.form button:hover {
+    cursor: pointer;
+}
+
+
+#hidden {
+    display: none;
+}
+
+.resultText {
+    padding: 10px 40px;
+}

@@ -1,0 +1,70 @@
+[
+	{
+		"text": "How long is the great wall of China?",
+		"choices": [
+			{
+				"text": "11196 km",
+				"points": 0
+			},
+			{
+				"text": "21196 km",
+				"points": 1
+			},
+			{
+				"text": "2119 km",
+				"points": 0
+			}
+		]
+	},
+	{
+		"text": "Which city is known for its Sichuan hot pot?",
+		"choices": [
+			{
+				"text": "Shanghai",
+				"points": 0
+			},
+			{
+				"text": "Chongqing",
+				"points": 1
+			},
+			{
+				"text": "Peking",
+				"points": 0
+			}
+		]
+	},
+	{
+		"text": "How to say thank you in chinese?",
+		"choices": [
+			{
+				"text": "Xiè xie",
+				"points": 1
+			},
+			{
+				"text": "Bié kèqì",
+				"points": 0
+			},
+			{
+				"text": "Nǐ hǎo",
+				"points": 0
+			}
+		]
+	},
+	{
+		"text": "What is hanfu?",
+		"choices": [
+			{
+				"text": "Instrument",
+				"points": 0
+			},
+			{
+				"text": "Food",
+				"points": 0
+			},
+			{
+				"text": "Clothing",
+				"points": 1
+			}
+		]
+	}
+]

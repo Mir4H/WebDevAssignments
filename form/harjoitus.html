@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div class="container">
+        <h2>Questionnaire</h2>
+        <p id="req">Fields marked by * are required.</p>
+        <form class="form" id="form" onsubmit="checkInputs(event)">
+            <div class="form_fields">
+                <label for="username">Full Name*</label>
+                <input type="text" placeholder="Firstname Lastname" id="username" autofocus size="60" maxlength="80"
+                    required />
+            </div>
+            <div class="form_fields">
+                <label for="password">Password*</label>
+                <input type="password" name="password" placeholder="Use 8-20 characters: a-z, A-Z, 0-9 _,.-:;?!" id="password" required />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <div class="form_fields">
+                <label for="password2">Password Again*</label>
+                <input type="password" placeholder="Password Again" id="password2" required />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <p>Your gender*</p>
+            <div class="form_fields">
+                <div class="choices">
+                    <input type="radio" id="genderChoice1" name="gender" value="Female" required>
+                    <label for="genderChoice1">Female</label>
+
+                    <input type="radio" id="genderChoice2" name="gender" value="Male">
+                    <label for="genderChoice2">Male</label>
+
+                    <input type="radio" id="genderChoice3" name="gender" value="Other">
+                    <label for="genderChoice3">Other</label>
+                </div>
+            </div>
+            <p>Your hobbies</p>
+            <div class="form_fields">
+                <div class="choices">
+                    <input type="checkbox" id="hobbyChoice1" name="hobbyChoice" value="Games">
+                    <label for="hobbyChoice1">games</label>
+
+                    <input type="checkbox" id="hobbyChoice2" name="hobbyChoice" value="Music">
+                    <label for="hobbyChoice2">music</label>
+
+                    <input type="checkbox" id="hobbyChoice3" name="hobbyChoice" value="Sports">
+                    <label for="hobbyChoice3">sports</label>
+
+                    <input type="checkbox" id="hobbyChoice4" name="hobbyChoice" value="TV">
+                    <label for="hobbyChoice4">TV</label>
+                </div>
+            </div>
+            <div class="form_fields">
+                <label for="birthdate">Birth date</label>
+                <input type="date" id="datepicker" size="40">
+            </div>
+            <div class="form_fields">
+                <label for="id_number_input">Height</label>
+                <input type="range" class="slider" name="number_input" id="id_number_input" min="40" max="300"
+                    value="170" oninput="id_number_output.value = this.value">
+                <input type="number" id="id_number_output" value="170" min="40" max="300"
+                    oninput="id_number_input.value = this.value">
+            </div>
+            <p>Favorite color</p>
+            <div class="color_field">
+                <input type="color" id="favoriteColor" name="favoriteColor" value="#af6980">
+            </div>
+            <div class="form_fields">
+                <label for="country">Country</label><br>
+                <select name="country" id="country">
+                    <optgroup label="Scandinavia">
+                        <option value="finland" selected>Finland</option>
+                        <option value="denmark">Denmark</option>
+                        <option value="norway">Norway</option>
+                        <option value="sweden">Sweden</option>
+                        <option value="iceland">Iceland</option>
+                    </optgroup>
+                    <optgroup label="Baltic">
+                        <option value="estonia">Estonia</option>
+                        <option value="latvia">Latvia</option>
+                        <option value="lithuania">Lithuania</option>
+                    </optgroup>
+                    <optgroup label="Other">
+                        <option value="russia">Russia</option>
+                    </optgroup>
+                </select>
+            </div>
+            <div class="form_fields">
+                <label for="profession">Profession</label>
+                <input list="professions" id="profession" size="40">
+                <datalist id="professions">
+                    <option value="nurse"></option>
+                    <option value="teacher"></option>
+                    <option value="plumber"></option>
+                    <option value="bureaucrat"></option>
+                </datalist>
+            </div>
+            <div class="form_fields">
+                <label for="message">Message*</label>
+                <textarea id="message" name="message" rows="6" cols="60" maxlength="1000" required placeholder="Leave us a message"></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="hidden">
+            <h2 id="title">Results</h2>
+            <p class="resultText">
+                <span id='nameField'></span>
+                <span id='passField'></span>
+                <span id='pass2Field'></span>
+                <span id='genderField'></span>
+                <span id='hobbyField'></span>
+                <span id='dateField'></span>
+                <span id='heightField'></span>
+                <span id='colorField'></span>
+                <span id='countryField'></span>
+                <span id='profField'></span>
+                <span id='msgField'></span>
+            </p>
+        </div>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+[
+{
+    "model": "polls.question",
+    "pk": 1,
+    "fields": {
+        "question_text": "What's up?",
+        "pub_date": "2021-09-12T14:13:01Z"
+    }
+},
+{
+    "model": "polls.question",
+    "pk": 2,
+    "fields": {
+        "question_text": "What's your favorite food?",
+        "pub_date": "2021-09-12T14:50:07Z"
+    }
+},
+{
+    "model": "polls.question",
+    "pk": 3,
+    "fields": {
+        "question_text": "What's your favorite movie genre?",
+        "pub_date": "2021-09-12T15:41:20Z"
+    }
+},
+{
+    "model": "polls.question",
+    "pk": 4,
+    "fields": {
+        "question_text": "Is it gonna be sunny tomorrow?",
+        "pub_date": "2021-09-15T08:50:54Z"
+    }
+},
+{
+    "model": "polls.choice",
+    "pk": 1,
+    "fields": {
+        "question": 1,
+        "choice_text": "Not much",
+        "votes": 0
+    }
+},
+{
+    "model": "polls.choice",
+    "pk": 2,
+    "fields": {
+        "question": 1,
+        "choice_text": "The sky",
+        "votes": 0
+    }
+},
+{
+    "model": "polls.choice",
+    "pk": 4,
+    "fields": {
+        "question": 2,
+        "choice_text": "pizza",
+        "votes": 0
+    }
+},
+{
+    "model": "polls.choice",
+    "pk": 5,
+    "fields": {
+        "question": 2,
+        "choice_text": "pasta",
+        "votes": 0
+    }
+},
+{
+    "model": "polls.choice",
+    "pk": 6,
+    "fields": {
+        "question": 3,
+        "choice_text": "Drama",
+        "votes": 5
+    }
+},
+{
+    "model": "polls.choice",
+    "pk": 7,
+    "fields": {
+        "question": 3,
+        "choice_text": "Thriller",
+        "votes": 4
+    }
+},
+{
+    "model": "polls.choice",
+    "pk": 8,
+    "fields": {
+        "question": 4,
+        "choice_text": "Sure!",
+        "votes": 0
+    }
+},
+{
+    "model": "polls.choice",
+    "pk": 9,
+    "fields": {
+        "question": 4,
+        "choice_text": "No, only darkness.",
+        "votes": 1
+    }
+},
+{
+    "model": "polls.choice",
+    "pk": 10,
+    "fields": {
+        "question": 4,
+        "choice_text": "It's raining man.",
+        "votes": 1
+    }
+},
+{
+    "model": "polls.choice",
+    "pk": 11,
+    "fields": {
+        "question": 1,
+        "choice_text": "Great things",
+        "votes": 0
+    }
+},
+{
+    "model": "polls.choice",
+    "pk": 12,
+    "fields": {
+        "question": 2,
+        "choice_text": "salad",
+        "votes": 0
+    }
+},
+{
+    "model": "polls.choice",
+    "pk": 13,
+    "fields": {
+        "question": 3,
+        "choice_text": "Romantic",
+        "votes": 0
+    }
+},
+{
+    "model": "polls.choice",
+    "pk": 14,
+    "fields": {
+        "question": 3,
+        "choice_text": "Scifi",
+        "votes": 1
+    }
+}
+]

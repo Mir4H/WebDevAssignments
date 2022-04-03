@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script>
+		var line, func, start_of_x, end_of_x, x_step;
+			
+		function calculate(sox, eox, xs, fun) {
+
+			let yValues = [];
+			let xValues = [];
+
+			if (eox < sox) {
+				alert("Invalid input");
+			}
+			else {
+				for (x = sox; x <= eox; x += xs) {
+					try {
+						with (Math) {
+							yValues.push(eval(fun));
+							xValues.push(x.toFixed(1));
+						}
+					}
+					catch (error) {
+						alert("Invalid input");
+						break;
+					}
+				let s = "<br>Values:<br>";
+				xValues.forEach((x, index) => {
+					let y = yValues[index];
+					s += `f(${x}): ${y.toFixed(4)}<br>`;
+				});
+				document.getElementById("id_result").innerHTML = s;
+
+				line.data.datasets[0].data = yValues;
+				line.data.labels = xValues;
+				line.update();
+				}
+			}
+		}
+
+		function start() {
+			let func = document.getElementById("func_x").value;
+			let start_of_x = parseInt(document.getElementById("start_of_x").value);
+			let end_of_x = parseInt(document.getElementById("end_of_x").value);
+			let x_step = parseFloat(document.getElementById("x_step").value);
+			if (window.line instanceof Chart) {
+                    window.line.destroy();
+                }
+			window.line = new Chart(document.getElementById("lineChart"), {
+				data: {
+					datasets: [
+						{
+							type: "line",
+							label: `${func}`,
+							borderColor: "#b57f9a",
+							backgroundColor: "#ffffff",
+							data: []
+						}],
+					labels: []
+				},
+				options: {
+					tension: 0.4,
+				}
+			});
+		calculate(start_of_x, end_of_x, x_step, func);
+		}
+		start(event);
+	</script>
+</head>
+
+<body>
+	<h1>Function calculator</h1>
+
+	<form>
+		<table>
+			<tr>
+				<td><label for="func_x">Function f(x) return value:</label></td>
+				<td><input type="text" id="func_x" value="sin(x)"></td>
+			</tr>
+			<tr>
+				<td><label for="start_of_x">Start of x range:</label></td>
+				<td><input type="number" id="start_of_x" value="0"></td>
+			</tr>
+			<tr>
+				<td><label for="end_of_x">End of x range:</label></td>
+				<td><input type="number" id="end_of_x" value="30"></td>
+			</tr>
+			<tr>
+				<td><label for="x_step">x step:</label></td>
+				<td><input type="number" id="x_step" min="0.1" value="0.5" step="0.1"></td>
+			</tr>
+		</table>
+		<input type="button" value="Calculate" onclick="start(event)"><br>
+		<hr>
+		<div>
+			<canvas id="lineChart" style="width: 100%; max-width: 1000px; height: 14vw; max-height: 700px;"></canvas>
+		</div>
+		<output id="id_result"></output>
+	</form>
+
+</body>
+
+</html>
